@@ -1,0 +1,1867 @@
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+  <!-- =========================
+       SIDEBAR
+  ========================== -->
+  <aside
+    [ngClass]="isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform duration-300"
+    aria-label="Sidebar">
+
+    <div class="h-full px-3 py-4 overflow-y-auto bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+
+      <!-- LOGO -->
+      <a href="#" class="flex items-center ps-2.5 mb-8">
+        <div class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-xl dark:bg-blue-900">
+          <svg
+            class="w-6 h-6 text-blue-700 dark:text-blue-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l6.16-3.42M5 12.5V17c0 1.1 3.13 3 7 3s7-1.9 7-3v-4.5" />
+          </svg>
+        </div>
+
+        <span class="self-center ml-3 text-xl font-semibold whitespace-nowrap dark:text-white">
+          Psicología
+        </span>
+      </a>
+
+      <!-- PERFIL RESUMIDO -->
+      <div class="p-3 mb-5 rounded-lg bg-gray-50 dark:bg-gray-700">
+
+        <div class="flex items-center">
+
+          <div class="relative">
+            <img
+              class="w-10 h-10 rounded-full"
+              src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              alt="Foto del estudiante">
+
+            <span
+              class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-white rounded-full dark:border-gray-700">
+            </span>
+          </div>
+
+          <div class="ml-3">
+            <p class="text-sm font-semibold text-gray-900 dark:text-white">
+              Juan Pérez
+            </p>
+
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              Estudiante
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MENU -->
+      <ul class="space-y-2 font-medium">
+
+        <!-- INICIO -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-blue-700 rounded-lg bg-blue-50 dark:bg-blue-900 dark:text-blue-300">
+
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9V9h2v4zm0-6H9V5h2v2z"/>
+            </svg>
+
+            <span class="ms-3">
+              Inicio
+            </span>
+          </a>
+        </li>
+
+        <!-- MI PERFIL -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20">
+              <path d="M10 10a4 4 0 100-8 4 4 0 000 8z"/>
+              <path d="M2 18a8 8 0 0116 0H2z"/>
+            </svg>
+
+            <span class="ms-3">
+              Mi perfil
+            </span>
+          </a>
+        </li>
+
+        <!-- FORMACIÓN -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"/>
+            </svg>
+
+            <span class="ms-3">
+              Mi formación
+            </span>
+          </a>
+        </li>
+
+        <!-- HISTORIAL ACADÉMICO -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+              <rect
+                x="9"
+                y="3"
+                width="6"
+                height="4"
+                rx="1"/>
+            </svg>
+
+            <span class="ms-3">
+              Historial académico
+            </span>
+
+            <span
+              class="inline-flex items-center justify-center w-5 h-5 ms-auto text-xs font-semibold text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+              API
+            </span>
+
+          </a>
+        </li>
+
+        <!-- EXPERIENCIA -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h8"/>
+            </svg>
+
+            <span class="ms-3">
+              Experiencia laboral
+            </span>
+          </a>
+        </li>
+
+        <!-- ENCUESTAS -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 10h8M8 14h5m-9 7l3.5-3.5H19a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h1v4z"/>
+            </svg>
+
+            <span class="ms-3">
+              Encuestas
+            </span>
+
+            <span
+              class="inline-flex items-center justify-center w-5 h-5 ms-auto text-xs font-semibold text-red-800 bg-red-100 rounded-full dark:bg-red-900 dark:text-red-300">
+              2
+            </span>
+          </a>
+        </li>
+
+        <!-- ACTIVIDADES -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3M4 11h16M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 002 2v12a2 2 0 002 2z"/>
+            </svg>
+
+            <span class="ms-3">
+              Actividades
+            </span>
+          </a>
+        </li>
+
+        <!-- BOLSA DE TRABAJO -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m-4 3h16v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            </svg>
+
+            <span class="ms-3">
+              Bolsa de trabajo
+            </span>
+
+            <span
+              class="inline-flex items-center justify-center w-5 h-5 ms-auto text-xs font-semibold text-green-800 bg-green-100 rounded-full dark:bg-green-900 dark:text-green-300">
+              8
+            </span>
+
+          </a>
+        </li>
+
+        <!-- POSTULACIONES -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+
+            <span class="ms-3">
+              Mis postulaciones
+            </span>
+          </a>
+        </li>
+
+        <!-- MI CV -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 3h7l5 5v13H7a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 3v6h5"/>
+            </svg>
+
+            <span class="ms-3">
+              Mi CV
+            </span>
+          </a>
+        </li>
+
+        <!-- NOTIFICACIONES -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+
+            <span class="ms-3">
+              Notificaciones
+            </span>
+
+            <span
+              class="inline-flex items-center justify-center w-5 h-5 ms-auto text-xs font-semibold text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+              4
+            </span>
+
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- CONFIGURACIÓN -->
+      <div class="pt-5 mt-5 border-t border-gray-200 dark:border-gray-700">
+
+        <ul class="space-y-2 font-medium">
+
+          <li>
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+              <svg
+                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"/>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"/>
+              </svg>
+
+              <span class="ms-3">
+                Configuración
+              </span>
+
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+
+              <svg
+                class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+              </svg>
+
+              <span class="ms-3">
+                Cerrar sesión
+              </span>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </aside>
+
+
+  <!-- =========================
+       CONTENIDO PRINCIPAL
+  ========================== -->
+
+  <div
+    [ngClass]="isSidebarOpen ? 'ml-64' : 'ml-0'"
+    class="p-4 transition-all duration-300">
+
+    <!-- TOPBAR -->
+
+    <nav
+      class="sticky top-4 z-30 flex items-center justify-between p-4 mb-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/60 dark:border-gray-700/60 shadow-md">
+
+      <div class="flex flex-row gap-2">
+        <!-- BOTÓN MENÚ (Tres barras) -->
+        <button
+          (click)="mostrarMenuAside()"
+          type="button"
+          class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+
+          </svg>
+
+        </button>
+
+        <div>
+
+          <h1 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Panel del estudiante
+          </h1>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Seguimiento de tu formación y oportunidades profesionales
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="flex items-center gap-4">
+
+        <!-- NOTIFICACIONES -->
+
+        <button
+          type="button"
+          class="relative inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+
+          <span
+            class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-800">
+            4
+          </span>
+
+        </button>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =========================
+         BIENVENIDA
+    ========================== -->
+
+    <div
+      class="p-6 mb-6 bg-gradient-to-r from-blue-700 to-indigo-700 border border-blue-600 rounded-lg shadow">
+
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+
+        <div>
+
+          <h2 class="mb-2 text-2xl font-bold text-white">
+            ¡Bienvenido, Juan! 👋
+          </h2>
+
+          <p class="text-blue-100">
+            Continúa fortaleciendo tu formación y descubre nuevas oportunidades.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="px-5 py-2.5 text-sm font-medium text-blue-700 bg-white rounded-lg hover:bg-blue-50">
+
+          Completar mi perfil
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         TARJETAS RESUMEN
+    ========================== -->
+
+    <div class="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- PROMEDIO -->
+
+      <div
+        class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center justify-between">
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Promedio académico
+            </p>
+
+            <h3 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">
+              82.5
+            </h3>
+
+          </div>
+
+          <div class="p-3 bg-blue-100 rounded-lg dark:bg-blue-900">
+
+            <svg
+              class="w-6 h-6 text-blue-700 dark:text-blue-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5z"/>
+            </svg>
+
+          </div>
+
+        </div>
+
+        <p class="mt-3 text-xs text-green-600">
+          Datos sincronizados mediante API
+        </p>
+
+      </div>
+
+
+      <!-- FORMACIÓN -->
+
+      <div
+        class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center justify-between">
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Actividades realizadas
+            </p>
+
+            <h3 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">
+              18
+            </h3>
+
+          </div>
+
+          <div class="p-3 bg-purple-100 rounded-lg dark:bg-purple-900">
+
+            <svg
+              class="w-6 h-6 text-purple-700 dark:text-purple-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13"/>
+            </svg>
+
+          </div>
+
+        </div>
+
+        <p class="mt-3 text-xs text-gray-500">
+          Cursos, talleres, seminarios y más
+        </p>
+
+      </div>
+
+
+      <!-- POSTULACIONES -->
+
+      <div
+        class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center justify-between">
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Postulaciones
+            </p>
+
+            <h3 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">
+              3
+            </h3>
+
+          </div>
+
+          <div class="p-3 bg-green-100 rounded-lg dark:bg-green-900">
+
+            <svg
+              class="w-6 h-6 text-green-700 dark:text-green-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4"/>
+            </svg>
+
+          </div>
+
+        </div>
+
+        <p class="mt-3 text-xs text-gray-500">
+          1 en proceso de revisión
+        </p>
+
+      </div>
+
+
+      <!-- OFERTAS -->
+
+      <div
+        class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center justify-between">
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Nuevas oportunidades
+            </p>
+
+            <h3 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">
+              8
+            </h3>
+
+          </div>
+
+          <div class="p-3 bg-orange-100 rounded-lg dark:bg-orange-900">
+
+            <svg
+              class="w-6 h-6 text-orange-700 dark:text-orange-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745"/>
+            </svg>
+
+          </div>
+
+        </div>
+
+        <p class="mt-3 text-xs text-gray-500">
+          Ofertas relacionadas con Psicología
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+
+
+      <!-- =========================
+           OPORTUNIDADES
+      ========================== -->
+
+      <div class="xl:col-span-2">
+
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+          <div class="flex items-center justify-between mb-5">
+
+            <div>
+
+              <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Oportunidades para ti
+              </h2>
+
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Cursos, eventos y ofertas laborales relacionados con tu carrera.
+              </p>
+
+            </div>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+              Ver todas
+            </a>
+
+          </div>
+
+
+          <!-- OPORTUNIDAD 1 -->
+
+          <div
+            class="p-4 mb-3 border border-gray-200 rounded-lg dark:border-gray-700">
+
+            <div class="flex items-start justify-between">
+
+              <div class="flex gap-4">
+
+                <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg dark:bg-blue-900">
+
+                  <svg
+                    class="w-6 h-6 text-blue-700 dark:text-blue-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6v12m6-6H6"/>
+                  </svg>
+
+                </div>
+
+                <div>
+
+                  <h3 class="font-semibold text-gray-900 dark:text-white">
+                    Taller de Intervención Psicológica
+                  </h3>
+
+                  <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Carrera de Psicología
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 mt-2">
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-blue-800 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-300">
+                      Taller
+                    </span>
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-gray-800 bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-300">
+                      20 horas
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button
+                type="button"
+                class="text-blue-600 hover:underline">
+                Ver
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- OPORTUNIDAD 2 -->
+
+          <div
+            class="p-4 mb-3 border border-gray-200 rounded-lg dark:border-gray-700">
+
+            <div class="flex items-start justify-between">
+
+              <div class="flex gap-4">
+
+                <div class="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg dark:bg-purple-900">
+
+                  <svg
+                    class="w-6 h-6 text-purple-700 dark:text-purple-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3M4 11h16M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 002 2v12a2 2 0 002 2z"/>
+                  </svg>
+
+                </div>
+
+                <div>
+
+                  <h3 class="font-semibold text-gray-900 dark:text-white">
+                    Seminario de Psicología Organizacional
+                  </h3>
+
+                  <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Empresa vinculada con la carrera
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 mt-2">
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-purple-800 bg-purple-100 rounded dark:bg-purple-900 dark:text-purple-300">
+                      Seminario
+                    </span>
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                      Gratuito
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button
+                type="button"
+                class="text-blue-600 hover:underline">
+                Ver
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- OPORTUNIDAD 3 -->
+
+          <div
+            class="p-4 border border-gray-200 rounded-lg dark:border-gray-700">
+
+            <div class="flex items-start justify-between">
+
+              <div class="flex gap-4">
+
+                <div class="flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg dark:bg-green-900">
+
+                  <svg
+                    class="w-6 h-6 text-green-700 dark:text-green-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745"/>
+                  </svg>
+
+                </div>
+
+                <div>
+
+                  <h3 class="font-semibold text-gray-900 dark:text-white">
+                    Auxiliar de Psicología
+                  </h3>
+
+                  <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Empresa colaboradora
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 mt-2">
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                      Oferta laboral
+                    </span>
+
+                    <span class="px-2.5 py-0.5 text-xs font-medium text-gray-800 bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-300">
+                      La Paz
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button
+                type="button"
+                class="px-3 py-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+                Postularme
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           PERFIL / NOTIFICACIONES
+      ========================== -->
+
+      <div class="space-y-6">
+
+
+        <!-- COMPLETAR PERFIL -->
+
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+          <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+            Completa tu perfil
+          </h2>
+
+          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+            Mantén actualizada tu información para mejorar tus oportunidades.
+          </p>
+
+          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+
+            <div
+              class="bg-blue-600 h-2.5 rounded-full"
+              style="width: 75%">
+            </div>
+
+          </div>
+
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            75% completado
+          </p>
+
+          <button
+            type="button"
+            class="w-full mt-4 px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+            Completar perfil
+          </button>
+
+        </div>
+
+
+        <!-- TELEGRAM -->
+
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+          <div class="flex items-center gap-3 mb-3">
+
+            <div class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full dark:bg-blue-900">
+
+              <svg
+                class="w-5 h-5 text-blue-600 dark:text-blue-300"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+                <path d="M21.5 3.5L2.9 10.7c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.7c.2.6.4.7.8.7.3 0 .5-.1.7-.3l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-15.2c.3-1.4-.5-2-1.8-1.6z"/>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h2 class="font-semibold text-gray-900 dark:text-white">
+                Notificaciones por Telegram
+              </h2>
+
+              <p class="text-xs text-green-600">
+                Conectado
+              </p>
+
+            </div>
+
+          </div>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Recibe avisos de nuevos cursos, talleres, eventos y ofertas laborales.
+          </p>
+
+          <button
+            type="button"
+            class="w-full mt-4 px-4 py-2 text-sm font-medium text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-gray-700">
+            Configurar Telegram
+          </button>
+
+        </div>
+
+
+        <!-- ENCUESTAS -->
+
+        <div
+          class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+          <div class="flex items-center justify-between mb-3">
+
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Encuestas pendientes
+            </h2>
+
+            <span
+              class="px-2.5 py-0.5 text-xs font-medium text-red-800 bg-red-100 rounded-full dark:bg-red-900 dark:text-red-300">
+              2
+            </span>
+
+          </div>
+
+          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+            Tienes encuestas pendientes de completar.
+          </p>
+
+          <button
+            type="button"
+            class="w-full px-4 py-2 text-sm font-medium text-white bg-purple-700 rounded-lg hover:bg-purple-800">
+            Ver encuestas
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         MI FORMACIÓN
+    ========================== -->
+
+    <div class="mt-6">
+
+      <div
+        class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex flex-col justify-between gap-3 mb-6 sm:flex-row sm:items-center">
+
+          <div>
+
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Mi formación
+            </h2>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Actividades académicas y extracurriculares registradas en tu perfil.
+            </p>
+
+          </div>
+
+          <button
+            type="button"
+            class="px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+
+            + Agregar formación externa
+
+          </button>
+
+        </div>
+
+
+        <div class="overflow-x-auto">
+
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+
+            <thead
+              class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+
+              <tr>
+
+                <th class="px-6 py-3">
+                  Actividad
+                </th>
+
+                <th class="px-6 py-3">
+                  Tipo
+                </th>
+
+                <th class="px-6 py-3">
+                  Institución
+                </th>
+
+                <th class="px-6 py-3">
+                  Fecha
+                </th>
+
+                <th class="px-6 py-3">
+                  Origen
+                </th>
+
+                <th class="px-6 py-3">
+                  Acción
+                </th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+
+                <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Taller de Psicología Clínica
+                </td>
+
+                <td class="px-6 py-4">
+                  Taller
+                </td>
+
+                <td class="px-6 py-4">
+                  Carrera de Psicología
+                </td>
+
+                <td class="px-6 py-4">
+                  15/08/2026
+                </td>
+
+                <td class="px-6 py-4">
+                  <span class="px-2.5 py-0.5 text-xs font-medium text-blue-800 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-300">
+                    Carrera
+                  </span>
+                </td>
+
+                <td class="px-6 py-4">
+                  <button class="font-medium text-blue-600 hover:underline">
+                    Ver
+                  </button>
+                </td>
+
+              </tr>
+
+
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+
+                <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Seminario de Neuropsicología
+                </td>
+
+                <td class="px-6 py-4">
+                  Seminario
+                </td>
+
+                <td class="px-6 py-4">
+                  UPEA
+                </td>
+
+                <td class="px-6 py-4">
+                  20/06/2026
+                </td>
+
+                <td class="px-6 py-4">
+
+                  <span class="px-2.5 py-0.5 text-xs font-medium text-purple-800 bg-purple-100 rounded dark:bg-purple-900 dark:text-purple-300">
+                    Externa
+                  </span>
+
+                </td>
+
+                <td class="px-6 py-4">
+
+                  <div class="flex gap-3">
+
+                    <button class="font-medium text-blue-600 hover:underline">
+                      Editar
+                    </button>
+
+                    <button class="font-medium text-red-600 hover:underline">
+                      Eliminar
+                    </button>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+
+              <tr class="bg-white dark:bg-gray-800">
+
+                <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                  Feria de Salud Mental
+                </td>
+
+                <td class="px-6 py-4">
+                  Feria
+                </td>
+
+                <td class="px-6 py-4">
+                  Carrera de Psicología
+                </td>
+
+                <td class="px-6 py-4">
+                  10/05/2026
+                </td>
+
+                <td class="px-6 py-4">
+
+                  <span class="px-2.5 py-0.5 text-xs font-medium text-blue-800 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-300">
+                    Carrera
+                  </span>
+
+                </td>
+
+                <td class="px-6 py-4">
+
+                  <button class="font-medium text-blue-600 hover:underline">
+                    Ver
+                  </button>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         HISTORIAL ACADÉMICO
+    ========================== -->
+
+    <div class="grid grid-cols-1 gap-6 mt-6 lg:grid-cols-3">
+
+      <!-- RESUMEN -->
+
+      <div
+        class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <h2 class="mb-5 text-lg font-semibold text-gray-900 dark:text-white">
+          Historial académico
+        </h2>
+
+        <div class="space-y-5">
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Carrera
+            </p>
+
+            <p class="font-medium text-gray-900 dark:text-white">
+              Psicología
+            </p>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Semestre actual
+            </p>
+
+            <p class="font-medium text-gray-900 dark:text-white">
+              7.º semestre
+            </p>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Materias aprobadas
+            </p>
+
+            <p class="font-medium text-gray-900 dark:text-white">
+              34
+            </p>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Promedio general
+            </p>
+
+            <p class="text-3xl font-bold text-blue-700 dark:text-blue-400">
+              82.5
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="p-3 mt-6 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-700 dark:text-blue-400">
+          Los datos académicos son obtenidos mediante la API externa de la institución.
+        </div>
+
+        <button
+          type="button"
+          class="w-full mt-5 px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+          Actualizar datos
+        </button>
+
+      </div>
+
+
+      <!-- MATERIAS -->
+
+      <div
+        class="lg:col-span-2 p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <div>
+
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Materias cursadas
+            </h2>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Último semestre registrado
+            </p>
+
+          </div>
+
+          <span class="px-3 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full dark:bg-green-900 dark:text-green-300">
+            Sincronizado
+          </span>
+
+        </div>
+
+        <div class="overflow-x-auto">
+
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+
+              <tr>
+
+                <th class="px-4 py-3">
+                  Materia
+                </th>
+
+                <th class="px-4 py-3">
+                  Semestre
+                </th>
+
+                <th class="px-4 py-3">
+                  Nota
+                </th>
+
+                <th class="px-4 py-3">
+                  Estado
+                </th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr class="border-b dark:border-gray-700">
+
+                <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">
+                  Psicología Clínica II
+                </td>
+
+                <td class="px-4 py-3">
+                  7.º
+                </td>
+
+                <td class="px-4 py-3 font-semibold">
+                  88
+                </td>
+
+                <td class="px-4 py-3">
+                  <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                    Aprobado
+                  </span>
+                </td>
+
+              </tr>
+
+              <tr class="border-b dark:border-gray-700">
+
+                <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">
+                  Psicología Organizacional
+                </td>
+
+                <td class="px-4 py-3">
+                  7.º
+                </td>
+
+                <td class="px-4 py-3 font-semibold">
+                  91
+                </td>
+
+                <td class="px-4 py-3">
+                  <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                    Aprobado
+                  </span>
+                </td>
+
+              </tr>
+
+              <tr class="border-b dark:border-gray-700">
+
+                <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">
+                  Psicología Social
+                </td>
+
+                <td class="px-4 py-3">
+                  7.º
+                </td>
+
+                <td class="px-4 py-3 font-semibold">
+                  76
+                </td>
+
+                <td class="px-4 py-3">
+                  <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                    Aprobado
+                  </span>
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">
+                  Evaluación Psicológica
+                </td>
+
+                <td class="px-4 py-3">
+                  7.º
+                </td>
+
+                <td class="px-4 py-3 font-semibold">
+                  80
+                </td>
+
+                <td class="px-4 py-3">
+                  <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded dark:bg-green-900 dark:text-green-300">
+                    Aprobado
+                  </span>
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         EXPERIENCIA LABORAL
+    ========================== -->
+
+    <div class="mt-6 p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+      <div class="flex items-center justify-between mb-5">
+
+        <div>
+
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+            Mi experiencia laboral
+          </h2>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Registra la experiencia que has adquirido durante tu formación.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+          + Agregar experiencia
+        </button>
+
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+
+        <div class="p-4 border border-gray-200 rounded-lg dark:border-gray-700">
+
+          <h3 class="font-semibold text-gray-900 dark:text-white">
+            Auxiliar de Recursos Humanos
+          </h3>
+
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Empresa ABC
+          </p>
+
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Enero 2026 — Julio 2026
+          </p>
+
+          <span class="inline-block mt-3 px-2.5 py-0.5 text-xs font-medium text-blue-800 bg-blue-100 rounded dark:bg-blue-900 dark:text-blue-300">
+            Psicología Organizacional
+          </span>
+
+        </div>
+
+        <div class="p-4 border border-dashed border-gray-300 rounded-lg dark:border-gray-600">
+
+          <div class="flex items-center justify-center h-full min-h-32">
+
+            <button
+              type="button"
+              class="text-sm font-medium text-blue-600 hover:underline">
+
+              + Registrar nueva experiencia
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         POSTULACIONES
+    ========================== -->
+
+    <div class="mt-6 p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+      <div class="flex items-center justify-between mb-5">
+
+        <div>
+
+          <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+            Mis postulaciones
+          </h2>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Consulta el estado de tus candidaturas.
+          </p>
+
+        </div>
+
+        <a
+          href="#"
+          class="text-sm font-medium text-blue-600 hover:underline">
+          Ver todas
+        </a>
+
+      </div>
+
+      <div class="overflow-x-auto">
+
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+
+            <tr>
+
+              <th class="px-6 py-3">
+                Puesto
+              </th>
+
+              <th class="px-6 py-3">
+                Empresa
+              </th>
+
+              <th class="px-6 py-3">
+                Fecha
+              </th>
+
+              <th class="px-6 py-3">
+                Estado
+              </th>
+
+              <th class="px-6 py-3">
+                Acción
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr class="border-b dark:border-gray-700">
+
+              <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                Psicólogo auxiliar
+              </td>
+
+              <td class="px-6 py-4">
+                Empresa ABC
+              </td>
+
+              <td class="px-6 py-4">
+                15/09/2026
+              </td>
+
+              <td class="px-6 py-4">
+
+                <span class="px-2.5 py-0.5 text-xs font-medium text-yellow-800 bg-yellow-100 rounded-full dark:bg-yellow-900 dark:text-yellow-300">
+                  En revisión
+                </span>
+
+              </td>
+
+              <td class="px-6 py-4">
+
+                <button class="font-medium text-blue-600 hover:underline">
+                  Ver detalle
+                </button>
+
+              </td>
+
+            </tr>
+
+
+            <tr class="border-b dark:border-gray-700">
+
+              <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                Pasantía RR.HH.
+              </td>
+
+              <td class="px-6 py-4">
+                Empresa XYZ
+              </td>
+
+              <td class="px-6 py-4">
+                05/09/2026
+              </td>
+
+              <td class="px-6 py-4">
+
+                <span class="px-2.5 py-0.5 text-xs font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+                  Recibida
+                </span>
+
+              </td>
+
+              <td class="px-6 py-4">
+
+                <button class="font-medium text-blue-600 hover:underline">
+                  Ver detalle
+                </button>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">
+                Asistente de Psicología
+              </td>
+
+              <td class="px-6 py-4">
+                Centro ABC
+              </td>
+
+              <td class="px-6 py-4">
+                20/08/2026
+              </td>
+
+              <td class="px-6 py-4">
+
+                <span class="px-2.5 py-0.5 text-xs font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                  Finalizada
+                </span>
+
+              </td>
+
+              <td class="px-6 py-4">
+
+                <button class="font-medium text-blue-600 hover:underline">
+                  Ver detalle
+                </button>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         CV
+    ========================== -->
+
+    <div class="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
+
+      <!-- SUBIR CV -->
+
+      <div
+        class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center gap-3 mb-4">
+
+          <div class="p-3 bg-red-100 rounded-lg dark:bg-red-900">
+
+            <svg
+              class="w-6 h-6 text-red-700 dark:text-red-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 3h7l5 5v13H7a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+            </svg>
+
+          </div>
+
+          <div>
+
+            <h2 class="font-semibold text-gray-900 dark:text-white">
+              Mi Currículum Vitae
+            </h2>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              CV_Juan_Perez.pdf
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="flex gap-3">
+
+          <button
+            type="button"
+            class="px-4 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+            Ver CV
+          </button>
+
+          <button
+            type="button"
+            class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 dark:bg-gray-700 dark:text-white dark:border-gray-600">
+            Subir PDF
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- GENERAR CV -->
+
+      <div
+        class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+        <div class="flex items-center gap-3 mb-4">
+
+          <div class="p-3 bg-green-100 rounded-lg dark:bg-green-900">
+
+            <svg
+              class="w-6 h-6 text-green-700 dark:text-green-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/>
+            </svg>
+
+          </div>
+
+          <div>
+
+            <h2 class="font-semibold text-gray-900 dark:text-white">
+              Generar CV automáticamente
+            </h2>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              Utiliza la información registrada en tu perfil.
+            </p>
+
+          </div>
+
+        </div>
+
+        <button
+          type="button"
+          class="w-full px-4 py-2 text-sm font-medium text-white bg-green-700 rounded-lg hover:bg-green-800">
+          Generar mi CV
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

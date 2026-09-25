@@ -1,0 +1,28 @@
+<router-outlet />
+
+@if (isPortadaShowed){
+  <app-portada
+    (isInicioDeSesionEmited)="capturarIsInicioDeSesionEmitido($event)"
+  ></app-portada>
+}
+
+@if (isLoginShowed){
+  <app-login
+    (tipoUsuarioEmited)="capturarTipoUsuarioEmitido($event)"
+  ></app-login>
+}
+
+@switch (tipoUsuarioSesion) {
+  @case ('empresa') {
+    <app-empresa></app-empresa>
+  }
+  @case ('carrera') {
+    <app-carrera></app-carrera>
+  }
+  @case ('estudiante') {
+    <app-estudiante></app-estudiante>
+  }
+  @default {
+    <p></p>
+  }
+}
