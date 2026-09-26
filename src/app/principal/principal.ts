@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-empresa',
+  selector: 'app-principal',
   imports: [NgClass],
-  templateUrl: './empresa.html',
-  styleUrl: './empresa.css',
+  templateUrl: './principal.html',
+  styleUrl: './principal.css',
 })
-export class Empresa {
+export class Principal {
+
   // En escritorio puedes iniciar en true si quieres que se muestre por defecto
   isSidebarOpen: boolean = false;
 

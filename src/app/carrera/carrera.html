@@ -1,19 +1,27 @@
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
 
+  <!-- BACKDROP (Fondo oscuro para móviles cuando el sidebar está abierto) -->
+  @if (isSidebarOpen) {
+    <div
+      (click)="mostrarMenuAside()"
+      class="fixed inset-0 z-40 bg-black/50 lg:hidden transition-opacity">
+    </div>
+  }
+
   <!-- =========================================================
        SIDEBAR
   ========================================================== -->
 
   <aside
     [ngClass]="isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform duration-300"
+    class="fixed top-0 left-0 z-50 w-64 h-screen transition-transform duration-300 lg:translate-x-0"
     aria-label="Sidebar">
 
     <div
       class="h-full px-3 py-4 overflow-y-auto bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
 
       <!-- LOGO -->
-      <a href="#" class="flex items-center ps-2.5 mb-8">
+      <a (click)="cerrarSidebarOpcion()" href="#" class="flex items-center ps-2.5 mb-8">
 
         <div
           class="flex items-center justify-center w-10 h-10 bg-purple-100 rounded-xl dark:bg-purple-900">
@@ -103,7 +111,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-purple-700 rounded-lg bg-purple-50 dark:bg-purple-900 dark:text-purple-300">
 
@@ -130,7 +138,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -168,7 +176,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -199,7 +207,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -230,7 +238,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -261,7 +269,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -299,7 +307,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -330,7 +338,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -368,7 +376,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -399,7 +407,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -430,7 +438,7 @@
 
         <li>
 
-          <a
+          <a (click)="cerrarSidebarOpcion()"
             href="#"
             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -468,7 +476,7 @@
 
           <li>
 
-            <a
+            <a (click)="cerrarSidebarOpcion()"
               href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -502,7 +510,7 @@
 
           <li>
 
-            <a
+            <a (click)="cerrarSidebarOpcion()"
               href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
 
@@ -541,40 +549,29 @@
        MAIN
   ========================================================== -->
 
-  <div
-    [ngClass]="isSidebarOpen ? 'ml-64' : 'ml-0'"
-    class="p-4 transition-all duration-300">
+  <div class="p-4 transition-all duration-300 lg:ml-64">
 
     <!-- =======================================================
          TOPBAR
     ======================================================== -->
 
     <nav
-      class="sticky top-4 z-30 flex items-center justify-between p-4 mb-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/60 dark:border-gray-700/60 shadow-md">
+      class="sticky top-4 z-30 flex items-center justify-between p-4 mb-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200/60 dark:border-gray-700/60 rounded-lg shadow-md">
 
       <div class="flex flex-row gap-2">
 
         <!-- BOTÓN MENÚ (Tres barras) -->
-        <button
-          (click)="mostrarMenuAside()"
-          type="button"
-          class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+        <div class="flex items-center gap-4">
+          <button
+            (click)="mostrarMenuAside()"
+            type="button"
+            class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 lg:hidden">
 
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-
-          </svg>
-
-        </button>
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
 
         <div>
 

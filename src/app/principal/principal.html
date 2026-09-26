@@ -1,0 +1,182 @@
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+  <!-- BACKDROP (Fondo oscuro para móviles cuando el sidebar está abierto) -->
+  @if (isSidebarOpen) {
+    <div
+      (click)="mostrarMenuAside()"
+      class="fixed inset-0 z-40 bg-black/50 lg:hidden transition-opacity">
+    </div>
+  }
+
+  <!-- ASIDE RESPONSIVO -->
+  <aside
+    [ngClass]="isSidebarOpen ? 'translate-x-0' : '-translate-x-full'"
+    class="fixed top-0 left-0 z-50 w-64 h-screen transition-transform duration-300 lg:translate-x-0"
+    aria-label="Sidebar">
+
+    <div
+      class="h-full px-3 py-4 overflow-y-auto bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl lg:shadow-none">
+
+      <!-- LOGO -->
+      <a href="#" class="flex items-center ps-2.5 mb-8">
+        <div class="flex items-center justify-center w-10 h-10 bg-purple-100 rounded-xl dark:bg-purple-900">
+          <svg class="w-6 h-6 text-purple-700 dark:text-purple-300" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13M12 6.253C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253M12 6.253C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <span class="self-center ml-3 text-xl font-semibold whitespace-nowrap dark:text-white">
+          PRINCIPAL
+        </span>
+      </a>
+
+      <!-- INFO CARD -->
+      <div class="p-3 mb-5 rounded-lg bg-gray-50 dark:bg-gray-700">
+        <div class="flex items-center">
+          <div class="flex items-center justify-center w-10 h-10 bg-purple-100 rounded-full dark:bg-purple-900">
+            <svg class="w-5 h-5 text-purple-700 dark:text-purple-300" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v7" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm font-semibold text-gray-900 dark:text-white">Carrera de Psicología</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Personal de Carrera</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENÚ DE NAVEGACIÓN (Añadido (click)="cerrarSidebarOpcion()") -->
+      <ul class="space-y-2 font-medium">
+        <!-- INICIO -->
+        <li>
+          <a (click)="cerrarSidebarOpcion()" href="#"
+             class="flex items-center p-2 text-purple-700 rounded-lg bg-purple-50 dark:bg-purple-900 dark:text-purple-300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9V9h2v4zm0-6H9V5h2v2z" />
+            </svg>
+            <span class="ms-3">Inicio</span>
+          </a>
+        </li>
+
+        <!-- ESTUDIANTES -->
+        <li>
+          <a (click)="cerrarSidebarOpcion()" href="#"
+             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="ms-3">Estudiantes</span>
+            <span
+              class="inline-flex items-center justify-center w-6 h-6 ms-auto text-xs font-semibold text-purple-800 bg-purple-100 rounded-full dark:bg-purple-900 dark:text-purple-300">
+              248
+            </span>
+          </a>
+        </li>
+
+        <!-- EGRESADOS -->
+        <li>
+          <a (click)="cerrarSidebarOpcion()" href="#"
+             class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            </svg>
+            <span class="ms-3">Egresados</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- CONFIGURACIÓN -->
+      <div class="pt-5 mt-5 border-t border-gray-200 dark:border-gray-700">
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a (click)="cerrarSidebarOpcion()" href="#"
+               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 001.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543-3.31-3.31-2.37-2.37a1.724 1.724 0 002.572-1.065z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span class="ms-3">Configuración</span>
+            </a>
+          </li>
+          <li>
+            <a (click)="cerrarSidebarOpcion()" href="#"
+               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+              <span class="ms-3">Cerrar sesión</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL (Margen adaptativo con lg:ml-64) -->
+  <div class="p-4 transition-all duration-300 lg:ml-64">
+
+    <!-- Navbar -->
+    <nav
+      class="sticky top-4 z-30 flex items-center justify-between p-4 mb-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border rounded-lg border-gray-200/60 dark:border-gray-700/60 shadow-md">
+      <div class="flex flex-row gap-2">
+
+        <div class="flex items-center gap-4">
+          <button
+            (click)="mostrarMenuAside()"
+            type="button"
+            class="p-2 text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 lg:hidden">
+
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <div>
+          <h1 class="text-xl font-semibold text-gray-900 dark:text-white">Panel de la Carrera</h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Gestión académica, estudiantil y seguimiento laboral</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button type="button"
+                class="relative inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span
+            class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-800">
+            5
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="p-6 mb-6 bg-gradient-to-r from-purple-700 to-indigo-700 border border-purple-600 rounded-lg shadow">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+        <div>
+          <h2 class="mb-2 text-2xl font-bold text-white">Gestión de la Carrera de Psicología</h2>
+          <p class="text-purple-100">Administra estudiantes, formación, oportunidades laborales y seguimiento
+            académico.</p>
+        </div>
+        <button type="button"
+                class="px-5 py-2.5 text-sm font-medium text-purple-700 bg-white rounded-lg hover:bg-purple-50">
+          Publicar actividad
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
