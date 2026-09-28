@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1790466936643,
+  "timestamp": 1790627100705,
   "index": "/psicosis/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/psicosis/favicon.ico",
         "/psicosis/index.html",
-        "/psicosis/main-DWZNPQC3.js",
+        "/psicosis/main-SDIJQY2S.js",
         "/psicosis/manifest.webmanifest",
         "/psicosis/styles-RKILURUJ.css"
       ],
@@ -50,8 +50,8 @@
     "/psicosis/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/psicosis/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/psicosis/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/psicosis/index.html": "fffbc55b565829043b84ccdbc3297aab81dbde16",
-    "/psicosis/main-DWZNPQC3.js": "045f534ab575446ecad35368a7b52860928daa80",
+    "/psicosis/index.html": "0f005cec5ab89ebf387c85ad159f725e1bd049d6",
+    "/psicosis/main-SDIJQY2S.js": "707526ee38815c3d4a9ee5d8d6a153f52b4e6e92",
     "/psicosis/manifest.webmanifest": "c269716f074f85cad7bcfd3b733fd734b07d83bd",
     "/psicosis/styles-RKILURUJ.css": "e043afa03ccdb3a8a3377d246fb5a6492530056f"
   },
