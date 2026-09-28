@@ -91,75 +91,75 @@
 
 
 
-        <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-          <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Panel de Notificaciones PWA
-            </h2>
-            <p class="mt-2 text-center text-sm text-gray-600">
-              Configura y prueba tus notificaciones push locales
-            </p>
-          </div>
+<!--        <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">-->
+<!--          <div class="sm:mx-auto sm:w-full sm:max-w-md">-->
+<!--            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">-->
+<!--              Panel de Notificaciones PWA-->
+<!--            </h2>-->
+<!--            <p class="mt-2 text-center text-sm text-gray-600">-->
+<!--              Configura y prueba tus notificaciones push locales-->
+<!--            </p>-->
+<!--          </div>-->
 
-          <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100">
+<!--          <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">-->
+<!--            <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100">-->
 
-              <!-- Botón de Permisos -->
-              <div class="mb-6">
-                <button
-                  (click)="solicitarPermiso()"
-                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-                  1. Activar Permisos de Notificación 🔔
-                </button>
-              </div>
+<!--              &lt;!&ndash; Botón de Permisos &ndash;&gt;-->
+<!--              <div class="mb-6">-->
+<!--                <button-->
+<!--                  (click)="solicitarPermiso()"-->
+<!--                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">-->
+<!--                  1. Activar Permisos de Notificación 🔔-->
+<!--                </button>-->
+<!--              </div>-->
 
-              <hr class="mb-6 border-gray-200">
+<!--              <hr class="mb-6 border-gray-200">-->
 
-              <!-- Formulario Flowbite -->
-              <form (submit)="$event.preventDefault()" class="space-y-6">
+<!--              &lt;!&ndash; Formulario Flowbite &ndash;&gt;-->
+<!--              <form (submit)="$event.preventDefault()" class="space-y-6">-->
 
-                <!-- Campo Título -->
-                <div>
-                  <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900">Título de la
-                    Notificación</label>
-                  <input
-                    type="text"
-                    id="titulo"
-                    [(ngModel)]="tituloNoti"
-                    name="tituloNoti"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none transition-all"
-                    placeholder="Ej. Alerta importante"
-                    required>
-                </div>
+<!--                &lt;!&ndash; Campo Título &ndash;&gt;-->
+<!--                <div>-->
+<!--                  <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900">Título de la-->
+<!--                    Notificación</label>-->
+<!--                  <input-->
+<!--                    type="text"-->
+<!--                    id="titulo"-->
+<!--                    [(ngModel)]="tituloNoti"-->
+<!--                    name="tituloNoti"-->
+<!--                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none transition-all"-->
+<!--                    placeholder="Ej. Alerta importante"-->
+<!--                    required>-->
+<!--                </div>-->
 
-                <!-- Campo Cuerpo -->
-                <div>
-                  <label for="cuerpo" class="block mb-2 text-sm font-medium text-gray-900">Mensaje (Body)</label>
-                  <textarea
-                    id="cuerpo"
-                    rows="3"
-                    [(ngModel)]="cuerpoNoti"
-                    name="cuerpoNoti"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none transition-all resize-none"
-                    placeholder="Ej. Tienes un nuevo mensaje en el sistema..."
-                    required></textarea>
-                </div>
+<!--                &lt;!&ndash; Campo Cuerpo &ndash;&gt;-->
+<!--                <div>-->
+<!--                  <label for="cuerpo" class="block mb-2 text-sm font-medium text-gray-900">Mensaje (Body)</label>-->
+<!--                  <textarea-->
+<!--                    id="cuerpo"-->
+<!--                    rows="3"-->
+<!--                    [(ngModel)]="cuerpoNoti"-->
+<!--                    name="cuerpoNoti"-->
+<!--                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 outline-none transition-all resize-none"-->
+<!--                    placeholder="Ej. Tienes un nuevo mensaje en el sistema..."-->
+<!--                    required></textarea>-->
+<!--                </div>-->
 
-                <!-- Botón Enviar Notificación Abajo del Formulario -->
-                <div>
-                  <button
-                    type="button"
-                    (click)="lanzarNotificacionLocal()"
-                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors shadow-sm">
-                    2. Mostrar Notificación 🚀
-                  </button>
-                </div>
+<!--                &lt;!&ndash; Botón Enviar Notificación Abajo del Formulario &ndash;&gt;-->
+<!--                <div>-->
+<!--                  <button-->
+<!--                    type="button"-->
+<!--                    (click)="lanzarNotificacionLocal()"-->
+<!--                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors shadow-sm">-->
+<!--                    2. Mostrar Notificación 🚀-->
+<!--                  </button>-->
+<!--                </div>-->
 
-              </form>
+<!--              </form>-->
 
-            </div>
-          </div>
-        </div>
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
 
 
